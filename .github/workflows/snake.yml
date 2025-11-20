@@ -1,4 +1,4 @@
-name: Generate GitHub Contribution Snake
+name: Generate Dynamic GitHub Contribution Snake
 
 on:
 
@@ -18,9 +18,9 @@ branches:
 - main
 
 jobs:
-generate:
+generate-snake:
 runs-on: ubuntu-latest
-timeout-minutes: 10
+timeout-minutes: 15
 
 ```
 steps:
@@ -30,19 +30,17 @@ steps:
     with:
       fetch-depth: 0
 
-  # 2. 生成贡献蛇形图
-  - name: Generate snake SVG
-    uses: Platane/snk/svg-only@v3
+  # 2. 生成动态蛇形 GIF
+  - name: Generate dynamic snake GIF
+    uses: Platane/snk@v3
     with:
       github_user_name: ${{ github.repository_owner }}
-      outputs: |
-        dist/github-contribution-grid-snake.svg
-        dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      gif_out_path: dist/github-contribution-grid-snake.gif
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  # 3. 提交生成的 SVG 到 output 分支
-  - name: Push snake SVG to output branch
+  # 3. 提交生成的 GIF 到 output 分支
+  - name: Commit and push snake GIF
     uses: crazy-max/ghaction-github-pages@v3.1.0
     with:
       target_branch: output
