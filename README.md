@@ -6,12 +6,14 @@
   <a href="https://github.com/jikssha"><img src="https://img.shields.io/badge/GitHub-Profile-black?logo=github" alt="GitHub" /></a>
   <img src="https://img.shields.io/github/stars/jikssha?style=social" alt="Stars" />
   <!-- Social badges (TG / X) as you requested -->
-  
+</p>  
+
 ---
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake-dark.gif" alt="Dark Dynamic GitHub Contribution Snake" />
 </p>
+
 
 ---
 
