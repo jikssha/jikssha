@@ -4,14 +4,10 @@ on:
   schedule:
     - cron: "0 1 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   generate-snake:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -23,12 +19,16 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: jikssha
-          gif_out_path: dist/github-contribution-grid-snake.gif
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          outputs: |
+            output/github-contribution-grid-snake.gif
+            output/github-contribution-grid-snake.svg
+            output/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Commit and push snake GIF
+      - name: Push generated files to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
