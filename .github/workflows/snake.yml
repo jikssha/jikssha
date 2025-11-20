@@ -1,34 +1,47 @@
-name: Generate contribution snake
+name: Generate GitHub Contribution Snake
+
+# 自动触发：每天凌晨 1 点，或者手动触发
 
 on:
-  schedule:
-    # every 12 hours
-    - cron: "0 */12 * * *"
-  workflow_dispatch:
+schedule:
+- cron: '0 1 * * *'
+workflow_dispatch:
 
 jobs:
-  generate-snake:
-    runs-on: ubuntu-latest
-    permissions:
-      # required to read contributions and create output files in the repo
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+generate-snake:
+runs-on: ubuntu-latest
+steps:
+# 1. Checkout 仓库
+- name: Checkout Repository
+uses: actions/checkout@v3
 
-      - name: Generate snake (SVG)
-        uses: Platane/snk@v3
-        with:
-          # default to the repository owner (you)
-          github_user_name: ${{ github.repository_owner }}
-          files: |
-            output/github-contribution-grid-snake.svg?palette=github&color_snake=%23ffb86b&color_dots=eeeeee,85e089,4caf50
-      - name: Commit and push generated image
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/github-contribution-grid-snake.svg || true
-          git commit -m "chore: update contribution snake" || echo "no changes to commit"
-          git push
+```
+  # 2. 设置 Node.js（snake-action 需要）
+  - name: Setup Node.js
+    uses: actions/setup-node@v3
+    with:
+      node-version: '18'
+
+  # 3. 安装依赖（可选，snake-action 会自动安装）
+  - name: Install Dependencies
+    run: npm install
+
+  # 4. 生成贡献蛇形图
+  - name: Generate Snake
+    uses: github/snake-action@v1
+    with:
+      github_user_name: jikssha
+      github_token: ${{ secrets.GITHUB_TOKEN }}
+      outputs: output/github-contribution-grid-snake.svg
+
+  # 5. 提交生成的 SVG 文件回仓库（可选）
+  - name: Commit Snake SVG
+    run: |
+      git config --global user.name "github-actions[bot]"
+      git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      git add output/github-contribution-grid-snake.svg
+      git commit -m "Update GitHub Contribution Snake"
+      git push
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
