@@ -22,6 +22,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
             output/github-contribution-grid-snake.gif
+            output/github-contribution-grid-snake-dark.gif
             output/github-contribution-grid-snake.svg
             output/github-contribution-grid-snake-dark.svg?palette=github-dark
 
