@@ -22,25 +22,21 @@ uses: actions/checkout@v3
     with:
       node-version: '18'
 
-  # 3. 安装依赖（可选，snake-action 会自动安装）
-  - name: Install Dependencies
-    run: npm install
-
-  # 4. 生成贡献蛇形图
+  # 3. 生成贡献蛇形图
   - name: Generate Snake
     uses: github/snake-action@v1
     with:
       github_user_name: jikssha
       github_token: ${{ secrets.GITHUB_TOKEN }}
-      outputs: output/github-contribution-grid-snake.svg
 
-  # 5. 提交生成的 SVG 文件回仓库（可选）
+  # 4. 提交生成的 SVG 文件回仓库
   - name: Commit Snake SVG
     run: |
       git config --global user.name "github-actions[bot]"
       git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      mkdir -p output
       git add output/github-contribution-grid-snake.svg
-      git commit -m "Update GitHub Contribution Snake"
+      git commit -m "Update GitHub Contribution Snake" || echo "No changes to commit"
       git push
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
