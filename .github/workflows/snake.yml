@@ -1,0 +1,34 @@
+name: Generate contribution snake
+
+on:
+  schedule:
+    # every 12 hours
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate-snake:
+    runs-on: ubuntu-latest
+    permissions:
+      # required to read contributions and create output files in the repo
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate snake (SVG)
+        uses: Platane/snk@v3
+        with:
+          # default to the repository owner (you)
+          github_user_name: ${{ github.repository_owner }}
+          files: |
+            output/github-contribution-grid-snake.svg?palette=github&color_snake=%23ffb86b&color_dots=eeeeee,85e089,4caf50
+      - name: Commit and push generated image
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/github-contribution-grid-snake.svg || true
+          git commit -m "chore: update contribution snake" || echo "no changes to commit"
+          git push
