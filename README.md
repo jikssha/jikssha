@@ -8,7 +8,7 @@
 
 <p align="center">
   <!-- 动态 GIF -->
-  <img src="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake.gif" alt="Dynamic GitHub Contribution Snake" />
+  <img src="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake-dark.svg" alt="Dynamic GitHub Contribution Snake" />
 </p>
 
 
