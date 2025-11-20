@@ -1,6 +1,5 @@
 <h1 align="center"> <strong> Vaghr </strong> </h1>
 
----
 <p align="center">
   <a href="https://github.com/jikssha"><img src="https://img.shields.io/badge/GitHub-Profile-black?logo=github" alt="GitHub" /></a>
   <img src="https://img.shields.io/github/stars/jikssha?style=social" alt="Stars" />
@@ -12,7 +11,7 @@
   <img src="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake.gif" alt="Dynamic GitHub Contribution Snake" />
 </p>
 ---
----
+
 ## 🚀 About Me
 
 * **加密货币交易员**
@@ -28,6 +27,7 @@
 <p align="center">
   <img src="https://imphub.pepeth.qzz.io/file/pepe/1763451865718_GLsxwKuXsAAkunN.jpg" width="100%" alt="banner" />
 </p>
+
 ---
 
 ## 📫 合作联系
