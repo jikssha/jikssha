@@ -5,12 +5,12 @@
   <img src="https://img.shields.io/github/stars/jikssha?style=social" alt="Stars" />
   <!-- Social badges (TG / X) as you requested -->
 </p>  
----
+
 <p align="center">
   <!-- 动态 GIF -->
   <img src="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake.gif" alt="Dynamic GitHub Contribution Snake" />
 </p>
----
+
 
 ## 🚀 About Me
 
