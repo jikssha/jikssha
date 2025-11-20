@@ -1,43 +1,30 @@
 name: Generate GitHub Contribution Snake
 
-# 自动触发：每天凌晨 1 点，或者手动触发
-
 on:
-schedule:
-- cron: '0 1 * * *'
-workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
 
 jobs:
-generate-snake:
-runs-on: ubuntu-latest
-steps:
-# 1. Checkout 仓库
-- name: Checkout Repository
-uses: actions/checkout@v3
+  generate-snake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-```
-  # 2. 设置 Node.js（snake-action 需要）
-  - name: Setup Node.js
-    uses: actions/setup-node@v3
-    with:
-      node-version: '18'
+      - name: Generate Snake
+        uses: ashutosh00710/github-contribution-grid-snake@v1.2
+        with:
+          username: jikssha
+          output: output/github-contribution-grid-snake.svg
 
-  # 3. 生成贡献蛇形图
-  - name: Generate Snake
-    uses: github/snake-action@v1
-    with:
-      github_user_name: jikssha
-      github_token: ${{ secrets.GITHUB_TOKEN }}
-
-  # 4. 提交生成的 SVG 文件回仓库
-  - name: Commit Snake SVG
-    run: |
-      git config --global user.name "github-actions[bot]"
-      git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      mkdir -p output
-      git add output/github-contribution-grid-snake.svg
-      git commit -m "Update GitHub Contribution Snake" || echo "No changes to commit"
-      git push
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
+      - name: Commit Snake SVG
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p output
+          git add output/github-contribution-grid-snake.svg
+          git commit -m "Update GitHub Contribution Snake" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
