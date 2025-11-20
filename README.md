@@ -1,32 +1,14 @@
-<h1 align="center"> <strong> vaghr </strong> </h1>
-
+<h1 align="center"> <strong> Vaghr </strong> </h1>
+---
 <p align="center">
   <a href="https://github.com/jikssha"><img src="https://img.shields.io/badge/GitHub-Profile-black?logo=github" alt="GitHub" /></a>
   <img src="https://img.shields.io/github/stars/jikssha?style=social" alt="Stars" />
   <!-- Social badges (TG / X) as you requested -->
-</p>
-<p align="center">
-  <a href="https://t.me/johnjay78956">
-    <img src="https://img.shields.io/badge/Telegram-blue" />
-  </a>
-  <a href="https://x.com/tong_hu59806">
-    <img src="https://img.shields.io/badge/Twitter-black" />
-  </a>
-</p>
 ---
 <p align="center">
-  <!-- 动态 GIF -->
-  <img src="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake.gif" alt="Dynamic GitHub Contribution Snake" />
+  <img src="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake-dark.gif" alt="Dark Dynamic GitHub Contribution Snake" />
 </p>
-
-<!-- 主题切换：亮色/暗色 SVG 备用 -->
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake-dark.svg" />
-  <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake.svg" />
-</picture>
 ---
-
 ## 🚀 About Me
 
 * **加密货币交易员**
