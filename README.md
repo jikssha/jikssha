@@ -11,7 +11,7 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake-dark.gif" alt="Dark Dynamic GitHub Contribution Snake" />
+  <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jikssha/jikssha/output/github-contribution-grid-snake-dark.svg" />
 </p>
 
 
