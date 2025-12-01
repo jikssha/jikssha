@@ -38,14 +38,14 @@
 </p>
 
 <p align="left">
-  <a href="https://t.me/johnjay78956">
+  <a href="https://t.me/vaghr_wegram_bot">
     <img src="https://img.shields.io/badge/Telegram-blue" />
   </a>
-  <a href="https://x.com/tong_hu59806">
+  <a href="https://x.com/vaghr_btc">
     <img src="https://img.shields.io/badge/Twitter-black" />
   </a>
 </p>
 
 ---
 
-<p align="center">✨ web3 & jikssha · Always Building ✨</p>
+<p align="center">✨ web3 & Vaghr · Always Building ✨</p>
