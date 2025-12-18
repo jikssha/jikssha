@@ -17,13 +17,6 @@
 * **加密货币交易员**
 * 专注：**金狗猎手 / Meme / 自动化脚本 / 黑天鹅监控**
 ---
-## 🧰 随便折腾
-* **领域**：EVM 交互、DEX 监控、链上/链下自动化
----
-## 📌 Projects
-* **价差 / 脱锚监控脚本**：多交易所实时价差检测 + 报警（TG / 邮件）
-* **Telegram 双向防骚扰机器人**：过滤规则 + 群-私聊联动，支持 VPS 一键部署
----
 <p align="center">
   <img src="https://imphub.pepeth.qzz.io/file/pepe/1763451865718_GLsxwKuXsAAkunN.jpg" width="100%" alt="banner" />
 </p>
